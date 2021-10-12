@@ -46,7 +46,7 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         Log.d(TAG, "onCreateViewHolder");
-
+        Log.d(TAG, "" + displayBanner(viewType));
         if (displayBanner(viewType)) {
             View movieView = LayoutInflater.from(context).inflate(R.layout.item_movie_best, parent, false);
             return new ViewHolderBest(movieView);
